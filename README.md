@@ -1,7 +1,5 @@
 # Programación II - Tecnicatura en Desarrollo de Software ISSD
 
-Este repositorio contiene los ejercicios, parciales y el coloquio realizados como parte de la materia **Programación II** en la Tecnicatura en Desarrollo de Software en ISSD. Durante esta asignatura, se abordaron los conceptos fundamentales de Java.
-
 ## Tabla de Contenidos
 - [Introducción](#introducción)
 - [Tecnologías](#tecnologías)
@@ -9,7 +7,7 @@ Este repositorio contiene los ejercicios, parciales y el coloquio realizados com
 - [Contacto](#contacto)
 
 ## Introducción
-Este repositorio muestra mi progreso en la materia **Programación I**. Incluye ejercicios prácticos, dos parciales y un coloquio final que cubren temas fundamentales de la programación en Python, tales como estructuras de datos, control de flujo, y funciones.
+Este repositorio contiene los ejercicios, parciales y el coloquio realizados como parte de la materia **Programación II** en la Tecnicatura en Desarrollo de Software en ISSD. Durante esta asignatura, se abordaron los conceptos fundamentales de Java.
 
 ## Tecnologías
 Los proyectos en este repositorio están desarrollados utilizando:
@@ -20,22 +18,18 @@ Los proyectos en este repositorio están desarrollados utilizando:
 ## Proyectos y Ejercicios
 Aquí algunos de los proyectos y ejercicios clave incluidos en este repositorio:
 
-- **[Primer Parcial]:** 
+- **Primer Parcial:** 
   - **Desarrollar un sistema de gestion de notas academicas, el mismo esta compuesto por las siguientes clases:** 
-> Alumno: (10%)
+> Alumno: 
   * legajo
   * nombre
   * String[] materias
   * int[] notas
-(la cantidad de materias debe estar definida en el constructor de la clase)
-
-> Examen: (10%)
+> Examen: 
   * Alumno[] alumnos 
   * int notaAprobacion
-(la cantidad de alumnos y la nota minima de aprobacion deben estar definidas en el constructor de la clase)
 
-
-- **[Segundo Parcial]:**
+- **Segundo Parcial:**
   - **Próximo....** 
     
 - **[Coloquio]:** Proyecto final que sintetiza los conocimientos adquiridos durante la materia.
