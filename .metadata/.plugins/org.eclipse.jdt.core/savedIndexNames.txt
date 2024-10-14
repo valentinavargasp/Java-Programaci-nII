@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\Users\HP\OneDrive\Escritorio\ISSD\Segundo Semestre\P2\Java-Programación-2\.metadata\.plugins\org.eclipse.jdt.core
+348111208.index
+2178751970.index
+1865797976.index
+3803894794.index
+1570852477.index
+3578018618.index
+3736494511.index

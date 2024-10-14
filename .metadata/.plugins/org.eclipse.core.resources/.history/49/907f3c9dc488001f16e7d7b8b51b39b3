@@ -1,0 +1,25 @@
+package gestorNotas;
+public class Alumno {
+    private String nombre;
+    private String[] materias;
+    private int[] notas;
+
+    public Alumno(String nombre, int cantMaterias) {
+        this.nombre = nombre;
+        this.materias = new String[cantMaterias];
+        this.notas = new int[cantMaterias];
+    }
+
+    // Métodos para acceder a los atributos, si es necesario
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String[] getMaterias() {
+        return materias;
+    }
+
+    public int[] getNotas() {
+        return notas;
+    }
+}

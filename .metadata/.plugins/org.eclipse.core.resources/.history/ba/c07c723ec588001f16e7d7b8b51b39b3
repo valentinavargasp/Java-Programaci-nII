@@ -1,0 +1,59 @@
+package gestorNotas;
+
+public class Examen {
+	private Alumno[] alumnos;
+    private int notaAprobacion;
+
+    public Examen(int cantAlumnos, int notaAprobacion) {
+        this.alumnos = new Alumno[cantAlumnos];
+        this.notaAprobacion = notaAprobacion;
+    }
+
+    // Cargar alumnos
+    public void cargarAlumno(int index, Alumno alumno) {
+        alumnos[index] = alumno;
+    }
+
+    // Mostrar listado con estado de materias (Aprobado o Reprobado)
+    public void mostrarEstadoAlumnos() {
+        for (Alumno alumno : alumnos) {
+            System.out.println("Alumno: " + alumno.getNombre() + " - Legajo: " + alumno.getLegajo());
+            for (int i = 0; i < alumno.getMaterias().length; i++) {
+                String estado = alumno.getNotas()[i] >= notaAprobacion ? "APROBADA" : "REPROBADA";
+                System.out.println(alumno.getMaterias()[i] + ": " + alumno.getNotas()[i] + " - " + estado);
+            }
+            System.out.println();
+        }
+    }
+
+    // Calcular y mostrar el promedio total por alumno
+    public void mostrarPromedioAlumnos() {
+        for (Alumno alumno : alumnos) {
+            int suma = 0;
+            for (int nota : alumno.getNotas()) {
+                suma += nota;
+            }
+            double promedio = suma / (double) alumno.getNotas().length;
+            System.out.println("Promedio del alumno " + alumno.getNombre() + ": " + promedio);
+        }
+    }
+
+    // Mostrar materias con nota superior al promedio del alumno
+    public void mostrarMateriasSuperioresAlPromedio() {
+        for (Alumno alumno : alumnos) {
+            int suma = 0;
+            for (int nota : alumno.getNotas()) {
+                suma += nota;
+            }
+            double promedio = suma / (double) alumno.getNotas().length;
+            System.out.println("Alumno: " + alumno.getNombre());
+            for (int i = 0; i < alumno.getMaterias().length; i++) {
+                if (alumno.getNotas()[i] > promedio) {
+                    System.out.println("Materia: " + alumno.getMaterias()[i] + " - Nota: " + alumno.getNotas()[i]);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+}

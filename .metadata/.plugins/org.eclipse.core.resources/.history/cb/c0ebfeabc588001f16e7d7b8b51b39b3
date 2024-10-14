@@ -1,0 +1,65 @@
+package gestorNotas;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int cantidadAlumnos = 2; // Número de alumnos
+        Examen examen = new Examen(cantidadAlumnos, 6); // Nota mínima de aprobación
+
+        // Creando el primer alumno
+        Alumno alumno1 = new Alumno("Juan", 3);
+        alumno1.setMateria(0, "Matemáticas");
+        alumno1.setNota(0, 7); // Aprobada
+        alumno1.setMateria(1, "Historia");
+        alumno1.setNota(1, 5); // Reprobada
+        alumno1.setMateria(2, "Biología");
+        alumno1.setNota(2, 6); // Aprobada
+
+        // Creando el segundo alumno
+        Alumno alumno2 = new Alumno("Ana", 3);
+        alumno2.setMateria(0, "Matemáticas");
+        alumno2.setNota(0, 4); // Reprobada
+        alumno2.setMateria(1, "Historia");
+        alumno2.setNota(1, 8); // Aprobada
+        alumno2.setMateria(2, "Biología");
+        alumno2.setNota(2, 9); // Aprobada
+
+        // Agregar alumnos al examen
+        examen.agregarAlumno(alumno1);
+        examen.agregarAlumno(alumno2);
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner sc = new Scanner(System.in);
+        int opcion; 
+
+        do {
+            System.out.println("\nMenú:");
+            System.out.println("1. Mostrar estado de las materias de los alumnos");
+            System.out.println("2. Mostrar promedio de los alumnos");
+            System.out.println("3. Mostrar materias con notas superiores al promedio");
+            System.out.println("4. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    examen.mostrarDatos(); // Este método ya existe y muestra el estado de las materias
+                    break;
+                case 2:
+                    examen.mostrarPromedioAlumnos(); // Asegúrate de implementar este método
+                    break;
+                case 3:
+                    examen.mostrarMateriasSuperioresAlPromedio(); // Asegúrate de implementar este método
+                    break;
+                case 4:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción no válida.");
+            }
+        } while (opcion != 4);
+        
+        sc.close(); // Cerrar el Scanner
+    }     
+}

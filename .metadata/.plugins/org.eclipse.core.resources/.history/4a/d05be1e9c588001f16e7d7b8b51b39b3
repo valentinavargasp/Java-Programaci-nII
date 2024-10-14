@@ -1,0 +1,73 @@
+package gestorNotas;
+
+public class Examen {
+    private Alumno[] alumnos; // Array para almacenar los alumnos
+    private int notaAprobacion; // Nota mínima para aprobar
+    private int index; // Para controlar la cantidad de alumnos agregados
+
+    // Constructor
+    public Examen(int cantidadAlumnos, int notaAprobacion) {
+        this.alumnos = new Alumno[cantidadAlumnos]; // Inicializar el array de alumnos
+        this.notaAprobacion = notaAprobacion; // Definir la nota de aprobación
+        this.index = 0; // Inicializar el índice
+    }
+
+    // Método para agregar alumnos
+    public void agregarAlumno(Alumno alumno) {
+        if (index < alumnos.length) {
+            alumnos[index++] = alumno; // Agregar el alumno y aumentar el índice
+        } else {
+            System.out.println("No se pueden agregar más alumnos.");
+        }
+    }
+
+    // Método para mostrar datos de los alumnos
+    public void mostrarDatos() {
+        for (int i = 0; i < index; i++) {
+            Alumno alumno = alumnos[i];
+            System.out.println("Alumno: " + alumno.getNombre());
+            String[] materias = alumno.getMaterias();
+            int[] notas = alumno.getNotas();
+            for (int j = 0; j < materias.length; j++) {
+                String estado = (notas[j] >= notaAprobacion) ? "APROBADA" : "REPROBADA";
+                System.out.println(materias[j] + ": " + notas[j] + " - " + estado);
+            }
+            System.out.println();
+        }
+    }
+
+    // Método para mostrar el promedio de los alumnos
+    public void mostrarPromedioAlumnos() {
+        for (int i = 0; i < index; i++) {
+            int[] notas = alumnos[i].getNotas();
+            double promedio = calcularPromedio(notas);
+            System.out.println("Promedio de " + alumnos[i].getNombre() + ": " + promedio);
+        }
+    }
+
+    // Método para calcular el promedio de notas
+    private double calcularPromedio(int[] notas) {
+        int suma = 0;
+        for (int nota : notas) {
+            suma += nota;
+        }
+        return (double) suma / notas.length;
+    }
+
+    // Método para mostrar materias con notas superiores al promedio
+    public void mostrarMateriasSuperioresAlPromedio() {
+        for (int i = 0; i < index; i++) {
+            Alumno alumno = alumnos[i];
+            int[] notas = alumno.getNotas();
+            double promedio = calcularPromedio(notas);
+            System.out.println("Materias con notas superiores al promedio de " + alumno.getNombre() + ":");
+            for (int j = 0; j < notas.length; j++) {
+                if (notas[j] > promedio) {
+                    System.out.println(alumno.getMaterias()[j] + ": " + notas[j]);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+

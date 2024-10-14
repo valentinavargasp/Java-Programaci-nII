@@ -1,0 +1,36 @@
+package gestorNotas;
+
+public class Alumno {
+    private String nombre;
+    private String[] materias;
+    private int[] notas;
+
+    // Constructor
+    public Alumno(String nombre, int cantidadMaterias) {
+        this.nombre = nombre;
+        this.materias = new String[cantidadMaterias];
+        this.notas = new int[cantidadMaterias];
+    }
+
+    // Métodos para establecer materia y nota
+    public void setMateria(int index, String materia) {
+        this.materias[index] = materia;
+    }
+
+    public void setNota(int index, int nota) {
+        this.notas[index] = nota;
+    }
+
+    // Métodos para obtener datos
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String[] getMaterias() {
+        return materias;
+    }
+
+    public int[] getNotas() {
+        return notas;
+    }
+}
