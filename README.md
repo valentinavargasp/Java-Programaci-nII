@@ -30,11 +30,10 @@ Aquí algunos de los proyectos y ejercicios clave incluidos en este repositorio:
   * int notaAprobacion
 
 - **Segundo Parcial:**
-  - **Próximo....** 
+ 
     
 - **[Coloquio]:** Proyecto final que sintetiza los conocimientos adquiridos durante la materia.
   
-- **[Ejercicios Prácticos]:** Colección de ejercicios para practicar conceptos específicos como bucles, listas, tuplas, diccionarios y funciones en Python.
 
   
 ## Contacto
